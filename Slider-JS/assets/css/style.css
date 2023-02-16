@@ -1,0 +1,92 @@
+:root {
+  --step--2: clamp(0.69rem, calc(0.58rem + 0.60vw), 1.00rem);
+  --step--1: clamp(0.83rem, calc(0.67rem + 0.81vw), 1.25rem);
+  --step-0: clamp(1.00rem, calc(0.78rem + 1.10vw), 1.56rem);
+  --step-1: clamp(1.20rem, calc(0.91rem + 1.47vw), 1.95rem);
+  --step-2: clamp(1.44rem, calc(1.05rem + 1.95vw), 2.44rem);
+  --step-3: clamp(1.73rem, calc(1.21rem + 2.58vw), 3.05rem);
+  --step-4: clamp(2.07rem, calc(1.39rem + 3.40vw), 3.82rem);
+  --step-5: clamp(2.49rem, calc(1.60rem + 4.45vw), 4.77rem);
+}
+
+.slider {
+  position: relative;
+}
+.slider .inner {
+  height: 500px;
+}
+.slider .inner .item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  -webkit-transition: 0.4s ease;
+  -ms-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+.slider .inner .item.active {
+  z-index: 1;
+  opacity: 1;
+}
+.slider .inner .item img {
+  width: 100%;
+  height: 500px;
+}
+.slider .slider-btn {
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  z-index: 2;
+  color: #fff;
+  font-size: var(--step-1);
+}
+.slider .prev-btn {
+  left: 0.8rem;
+}
+.slider .next-btn {
+  right: 0.8rem;
+}
+.slider .dots {
+  position: absolute;
+  left: 0;
+  bottom: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.slider .dots span {
+  display: inline-block;
+  width: 40px;
+  height: 4px;
+  background-color: #fff;
+  margin-right: 5px;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+.slider .dots span:hover {
+  opacity: 1;
+}
+.slider .dots span.active {
+  opacity: 1;
+}
+
+.copy {
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -80%);
+  font-size: var(--step-0);
+}
+.copy p {
+  color: #292929;
+  font-weight: 300;
+}
+.copy p a {
+  color: #fd6b22;
+  text-decoration: none;
+  font-size: var(--step--1);
+  font-weight: 200;
+}/*# sourceMappingURL=style.css.map */
